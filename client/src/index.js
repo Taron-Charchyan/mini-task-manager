@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { applyMiddleware, compose, legacy_createStore } from "redux";
 import reducer from "./store/reducer";
 import { thunk } from "redux-thunk";
@@ -21,5 +20,3 @@ root.render(
         </SocketProvider>
     </Provider>
 );
-
-reportWebVitals();

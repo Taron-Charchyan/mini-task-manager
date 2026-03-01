@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Users from "./pages/Users";
-import Header from "./components/Header";
 import ErrorPage from "./pages/ErrorPage";
 import { PrivateRoute, PublicRoute } from "./helpers/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
