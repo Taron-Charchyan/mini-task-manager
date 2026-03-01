@@ -1,0 +1,87 @@
+.tasksContainer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.tasksList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.taskCard {
+    background: white;
+    padding: 20px 24px;
+    border-radius: 16px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.taskCard h4 {
+    margin: 0;
+    flex-grow: 1;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status {
+    width: 55px;
+    text-align: center;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.done {
+    color: #059669;
+    background: #c8ffe5;
+}
+
+.pending {
+    color: #d97706;
+    background: #fff4d5;
+}
+
+.empty {
+    text-align: center;
+    color: #e2e8f0;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 2px dashed #e2e8f0;
+}
+
+@media (max-width: 410px) {
+    .status {
+        width: auto;
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tasksContainer {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .taskCard {
+        padding: 12px 20px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .taskCard h4 {
+        font-size: 16px;
+        flex-basis: 100%;
+    }
+}

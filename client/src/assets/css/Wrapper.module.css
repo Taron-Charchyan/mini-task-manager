@@ -1,0 +1,16 @@
+:global(body) {
+    margin: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.main {
+    flex: 1;
+}

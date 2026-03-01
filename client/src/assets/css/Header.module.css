@@ -1,0 +1,129 @@
+.navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 24px;
+}
+
+.navLogo {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #1e293b;
+    letter-spacing: -1px;
+}
+
+.navLogo span {
+    color: #764ba2;
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navItem {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.navItem:hover,
+.navItem.active {
+    color: #764ba2;
+    background: none;
+}
+
+.navSignupBtn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navSignupBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.navLogoutBtn {
+    color: #ef4444;
+}
+
+.navLogoutBtn:hover {
+    color: #b91c1c;
+}
+
+.navHamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.bar {
+    width: 26px;
+    height: 3px;
+    background: #1e293b;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .navHamburger {
+        display: flex;
+    }
+
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 72px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        height: calc(100vh - 72px);
+        text-align: center;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 50px 0;
+        gap: 30px;
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+
+    .navItem {
+        font-size: 18px;
+    }
+
+    .bar.active:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .bar.active:nth-child(2) { opacity: 0; }
+    .bar.active:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}

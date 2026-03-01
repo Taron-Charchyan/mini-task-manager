@@ -1,0 +1,76 @@
+.userDropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 220px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    z-index: 4000;
+}
+
+.userDropdownInfo {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.userDropdownName {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.userDropdownEmail {
+    margin: 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.userDropdownActions {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dropdownBtn {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownBtn:hover {
+    background: rgba(118, 75, 162, 0.08);
+    color: #764ba2;
+}
+
+.dropdownBtnDanger {
+    color: #ef4444;
+}
+
+.dropdownBtnDanger:hover {
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .userDropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+}

@@ -1,0 +1,87 @@
+.addTaskContainerClosed {
+    margin: 1.5rem auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.addTaskContainer {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+}
+
+.addTaskContainer h2 {
+    margin-bottom: 1.2rem;
+    color: #1e293b;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.inputGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.inputGroup input,
+.inputGroup select {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #f8fafc;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+    outline: none;
+    border-color: #6366f1;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    transform: translateY(-3px);
+}
+
+.modalBtn {
+    padding: 10px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.modalBtn:hover:not(:disabled) {
+    background-color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.modalBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .inputGroup {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup button {
+        width: 100%;
+    }
+}
