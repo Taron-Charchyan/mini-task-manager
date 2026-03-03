@@ -8,8 +8,8 @@ const TaskSchema = new mongoose.Schema({
         enum: ["pending", "done"],
         default: "pending"
     },
-    createdBy: { type: String, required: true },
-    assignedTo: { type: String, required: true },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
 });

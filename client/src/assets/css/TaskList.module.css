@@ -31,6 +31,64 @@
     font-weight: 600;
 }
 
+.tabsContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tabBtn {
+    padding: 10px 24px;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.tabBtn:hover:not(:disabled) {
+    background-color: #e8f0fe;
+}
+
+.tabBtn:disabled {
+    background-color: #007bff;
+    color: white;
+    cursor: default;
+}
+
+.filterContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.filterBtn {
+    padding: 10px 24px;
+    background-color: white;
+    color: #6366f1;
+    border: 2px solid #6366f1;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.filterBtn:hover:not(:disabled) {
+    background-color: #eef2ff;
+}
+
+.filterBtn:disabled {
+    background-color: #6366f1;
+    color: white;
+    cursor: default;
+}
+
 .status {
     width: 55px;
     text-align: center;
